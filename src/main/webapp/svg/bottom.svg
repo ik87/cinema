@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 310 100 ">
+    <style>
+    .free, .occupied, .chose {
+    stroke: black;
+    }
+
+    .free {
+    fill: green;
+    }
+
+    .occupied {
+    fill: red;
+    }
+
+    .chose {
+    fill: yellow;
+    }
+    text {
+        font-size: 1.1em;
+        }
+    </style>
+    <rect class="free" width="60" height="60" x="5" y="0.5" rx="10" ry="10"/>
+    <rect class="occupied" width="60" height="60" x="110" y="0.5" rx="10" ry="10"/>
+    <rect class="chose" width="60" height="60" x="220" y="0.5" rx="10" ry="10"/>
+    <!-- <rect class="chose" width="140" height="70" x="490" y="0.5" rx="10" ry="10"/>-->
+    <text x="0" y="80">free place</text>
+    <text x="90" y="80">occupied place</text>
+    <text x="210" y="80">chose place</text>
+</svg>

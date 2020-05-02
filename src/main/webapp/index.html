@@ -6,15 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" rel="stylesheet">
 
-    <title>canvas test</title>
+    <title>SVG test</title>
 </head>
 <style>
-    /*    * {
-            border: 1px solid black;
-        }*/
+    /*               * {
+                       border: 1px solid black;
+                   }*/
 </style>
 <body>
 <!-- Optional JavaScript -->
@@ -29,45 +29,43 @@
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
 
+
+
 <div class="container">
-    <div class="row mt-3">
-        <div class="mx-auto">
-            <canvas id="rectangle" width="200" height="100"></canvas>
+    <div style="margin: 1em 0em 1em 1em">
+        <div class="row">
+            <div class="mx-auto ">
+                <h2 class="display-4">Cinema <span class="badge badge-secondary">ik87</span></h2>
+            </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="mx-auto">
-            <canvas id="line" width="200" height="100"></canvas>
+        <div class="row mt-3">
+            <div class="mx-auto" style="width: 34em">
+                <img  class="float-left " src="svg/top.svg"/>
+            </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="mx-auto">
-            <canvas id="circle" width="200" height="100"></canvas>
+        <div class="row">
+            <div class="mx-auto mt-2">
+                Please choose place:
+            </div>
+        </div>
+        <div class="row">
+            <div class="mx-auto" style="width: 30em">
+                <div class="mt-4" id="places"></div>
+            </div>
+        </div>
+        <hr class="my-4">
+        <!-- bottom block -->
+        <div class="row mt-2">
+
+            <div class="mx-auto" style="width: 30em; padding-right: 1em">
+                    <img style="width: 12em;" class="float-left " src="svg/bottom.svg"/>
+                    <button type="button" class="btn btn-primary btn-lg float-right">Buy</button>
+            </div>
+
         </div>
     </div>
 </div>
-
 <script>
-
-    //draw rectangle
-    var rectangle = document.getElementById("rectangle");
-    var rect_ctx = rectangle.getContext("2d");
-    rect_ctx.fillStyle = "#FF0000";
-    rect_ctx.fillRect(0, 0, 150, 75);
-
-    //draw line
-    var line = document.getElementById("line");
-    var line_ctx = line.getContext("2d");
-    line_ctx.moveTo(0, 0);
-    line_ctx.lineTo(150, 75);
-    line_ctx.stroke();
-
-    //draw circle
-    var circle = document.getElementById("circle");
-    var circle_ctx = circle.getContext("2d");
-    circle_ctx.beginPath();
-    circle_ctx.arc(95, 50, 40, 0, 2 * Math.PI);
-    circle_ctx.stroke();
 
 </script>
 <!-- Optional JavaScript -->
@@ -81,5 +79,10 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
+
+<!-- Places generator -->
+<link href="css/place.css" rel="stylesheet">
+<script src="js/place_gen.js"></script>
+
 </body>
 </html>

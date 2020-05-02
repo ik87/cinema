@@ -1,0 +1,15 @@
+.free, .occupied, .chose {
+    stroke: black;
+}
+
+.free {
+    fill: green;
+}
+
+.occupied {
+    fill: red;
+}
+
+.chose {
+    fill: yellow;
+}
