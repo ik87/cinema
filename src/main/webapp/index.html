@@ -32,7 +32,7 @@
 
 
 <div class="container">
-    <div style="margin: 1em 0em 1em 1em">
+    <div style="margin: 1rem 0rem 1rem 1rem">
         <div class="row">
             <div class="mx-auto ">
                 <h2 class="display-4">Cinema <span class="badge badge-secondary">ik87</span></h2>
@@ -59,12 +59,45 @@
 
             <div class="mx-auto" style="width: 30em; padding-right: 1em">
                     <img style="width: 12em;" class="float-left " src="svg/bottom.svg"/>
-                    <button type="button" class="btn btn-primary btn-lg float-right">Buy</button>
+                    <button type="button" class="btn btn-primary btn-lg float-right"
+                            data-toggle="modal" data-target=".bd-example-modal-lg">Buy</button>
             </div>
 
         </div>
     </div>
 </div>
+<!-- modal, buy -->
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Booking</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="recipient-name" class="col-form-label">Phone number:</label>
+                        <input type="text" class="form-control phone_mask" id="recipient-name"
+                               placeholder="Phone number">
+                    </div>
+                    <div class="form-group">
+                        <label for="message-text" class="col-form-label">Message:</label>
+                        <textarea class="form-control" id="message-text"></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">OK</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
 <script>
 
 </script>
@@ -84,5 +117,11 @@
 <link href="css/place.css" rel="stylesheet">
 <script src="js/place_gen.js"></script>
 
+<!-- Masked phone-->
+<script src="https://cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/src/jquery.maskedinput.js"
+        type="text/javascript"></script>
+<script>
+    $(".phone_mask").mask("+9 (999) 999-99-99");
+</script>
 </body>
 </html>
