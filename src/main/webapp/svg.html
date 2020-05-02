@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" rel="stylesheet">
+
+    <title>SVG test</title>
+</head>
+<style>
+ /*               * {
+                    border: 1px solid black;
+                }*/
+</style>
+<body>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+<div class="container-sm">
+    <div class="shadow px-5 pt-2 pb-2 mb-4 bg-white rounded">
+        <div class="row">
+            <div class="mx-auto ">
+                <h2 class="display-4">Cinema <span class="badge badge-secondary">ik87</span></h2>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="mx-auto" style="width: 34rem">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 50">
+                    <path stroke="black" fill="#b2b2b2"
+                          d="M680.5,35.5a13.47,13.47,0,0,0-9.7-12.43L596,4.37A157.24,
+                      157.24,0,0,0,564.5.5h-448A130.63,130.63,0,0,0,85.17,5.1L10.07,27.63A14.22,
+                      14.22,0,0,0,.5,40.5c0,5.52,4.28,8.7,9.57,7.13L85.17,25.1a130.7,130.7,0,0,1,
+                      31.33-4.6h448A156.44,156.44,0,0,1,596,24.38l74.77,18.7c5.36,1.33,9.7-2.06,
+                      9.7-7.58Z"/>
+                </svg>
+            </div>
+        </div>
+        <div class="row">
+            <div class="mx-auto mt-2">
+                Please choose place:
+            </div>
+        </div>
+        <div class="row">
+            <div class="mx-auto" style="width: 30em">
+                <div class="mt-4" id="places"></div>
+            </div>
+        </div>
+        <hr class="my-4">
+        <!-- bottom block -->
+        <div class="row mt-2">
+            <div class="mx-auto" >
+                <div class="row">
+                <div  class="col-6" style="width: 30em">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 80">
+                    <rect class="free" width="60" height="60" x="5" y="0.5" rx="10" ry="10"/>
+                    <rect class="occupied" width="60" height="60" x="110" y="0.5" rx="10" ry="10"/>
+                    <rect class="chose" width="60" height="60" x="220" y="0.5" rx="10" ry="10"/>
+                   <!-- <rect class="chose" width="140" height="70" x="490" y="0.5" rx="10" ry="10"/>-->
+                    <text x="0" y="80">free place</text>
+                    <text x="90" y="80">occupied place</text>
+                    <text x="215" y="80">chose place</text>
+                </svg>
+            </div>
+                <div class="col-3">
+                    <button type="button" class="btn btn-primary" >Buy</button>
+                </div>
+            </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<style>/*
+    rect:hover {
+        stroke: aqua;
+        stroke-width: 0.2em;
+    }*/
+.free, .occupied, .chose {
+    stroke: black;
+}
+
+.free {
+    fill: green;
+}
+
+.occupied {
+    fill: red;
+}
+
+.chose {
+    fill: yellow;
+}
+
+</style>
+<script>
+
+    //for ex. [
+    //          {row: 1, place: 2, status: free},
+    //          {row: 2, place: 3, status: occupied},
+    //          {row: 3, place: 4, status: chose},
+    //        ]
+    let status = [
+        {row: 1, place: 2, status: "free"},
+        {row: 2, place: 3, status: "occupied"},
+        {row: 3, place: 4, status: "chose"},
+    ];
+
+    function setStatusPlaceSVG(places) {
+        places.forEach((element) => {
+            var id = element.row + "," + element.place;
+            var place = document.getElementById(id);
+            place.setAttributeNS(null, "class", element.status);
+        })
+    }
+
+    function createPlacesSVG() {
+        //0 empty
+        //1 green
+        //2 yellow
+        //3 red
+
+        var scheme = [
+            [1, 1, 1, 0, 1, 1, 1],
+            [1, 1, 1, 0, 1, 1, 1],
+            [1, 1, 1, 0, 1, 1, 1],
+            [1, 1, 1, 1, 1, 1, 1]
+        ];
+
+        var xmlns = "http://www.w3.org/2000/svg";
+        var SIZE_PLACE = 80;
+        var OFFSET = 15;
+        var WIDTH = scheme[0].length * (SIZE_PLACE + OFFSET);
+        var HEIGHT = scheme.length * (SIZE_PLACE + OFFSET);
+
+        var places = document.createElementNS(xmlns, "svg");
+        places.setAttributeNS(null, "viewBox", "0 0 " + WIDTH + " " + HEIGHT);
+
+        for (row = 0; row < scheme.length; row++) {
+            var y = 0.5 + (OFFSET + SIZE_PLACE) * row;
+            for (p = 1, cell = 0; cell < scheme[row].length; cell++) {
+                var x = 0.5 + (OFFSET + SIZE_PLACE) * cell;
+
+                if (scheme[row][cell] != 0) {
+                    var place = document.createElementNS(xmlns, "rect");
+                    place.setAttributeNS(null, "id", row + 1 + "," + p++);
+                    place.setAttributeNS(null, "height", SIZE_PLACE);
+                    place.setAttributeNS(null, "width", SIZE_PLACE);
+                    place.setAttributeNS(null, "rx", SIZE_PLACE / 4.7);
+                    place.setAttributeNS(null, "ry", SIZE_PLACE / 4.7);
+                    place.setAttributeNS(null, "x", x);
+                    place.setAttributeNS(null, "y", y);
+                    places.appendChild(place);
+                }
+            }
+        }
+        document.getElementById("places").appendChild(places);
+    }
+
+    createPlacesSVG();
+    setStatusPlaceSVG(status);
+
+</script>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</body>
+</html>

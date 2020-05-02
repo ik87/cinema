@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="639.82" height="481" viewBox="0 0 639.82 481">
+  <defs>
+    <style>
+      .green_p {
+        fill: #7ab648;
+      }
+
+      .yellow_p, .red_p, .green_p {
+        stroke: #333;
+      }
+
+      .yellow_p {
+        fill: #ffdf71;
+      }
+
+      .red_p {
+        fill: #c92d39;
+      }
+    </style>
+  </defs>
+  <title>places</title>
+    <g id="places">
+      <path class="green_p" d="M1.45,17.5a17,17,0,0,1,17-17h46a17,17,0,0,1,17,17v46a17,17,0,0,1-17,17h-46a17,17,0,0,1-17-17Z"/>
+      <path class="yellow_p" d="M94.42,17.5a17,17,0,0,1,17-17h46a17,17,0,0,1,17,17v46a17,17,0,0,1-17,17h-46a17,17,0,0,1-17-17Z"/>
+      <rect class="yellow_p" x="187.4" y="0.5" width="80" height="80" rx="17" ry="17"/>
+      <rect class="yellow_p" x="373.36" y="0.5" width="80" height="80" rx="17" ry="17"/>
+      <rect class="yellow_p" x="466.34" y="0.5" width="80" height="80" rx="17" ry="17"/>
+      <rect class="yellow_p" x="559.32" y="0.5" width="80" height="80" rx="17" ry="17"/>
+      <path class="green_p" d="M.5,117.5a17,17,0,0,1,17-17h46a17,17,0,0,1,17,17v46a17,17,0,0,1-17,17h-46a17,17,0,0,1-17-17Z"/>
+      <rect class="green_p" x="93.47" y="100.5" width="80" height="80" rx="17" ry="17"/>
+      <path class="green_p" d="M186.45,117.5a17,17,0,0,1,17-17h46a17,17,0,0,1,17,17v46a17,17,0,0,1-17,17h-46a17,17,0,0,1-17-17Z"/>
+      <rect class="green_p" x="372.4" y="100.5" width="80" height="80" rx="17" ry="17"/>
+      <rect class="red_p" x="465.38" y="100.5" width="80" height="80" rx="17" ry="17"/>
+      <rect class="red_p" x="558.36" y="100.5" width="80" height="80" rx="17" ry="17"/>
+      <path class="green_p" d="M.5,217.5a17,17,0,0,1,17-17h46a17,17,0,0,1,17,17v46a17,17,0,0,1-17,17h-46a17,17,0,0,1-17-17Z"/>
+      <rect class="green_p" x="93.47" y="200.5" width="80" height="80" rx="17" ry="17"/>
+      <path class="green_p" d="M186.45,217.5a17,17,0,0,1,17-17h46a17,17,0,0,1,17,17v46a17,17,0,0,1-17,17h-46a17,17,0,0,1-17-17Z"/>
+      <rect class="green_p" x="372.4" y="200.5" width="80" height="80" rx="17" ry="17"/>
+      <rect class="green_p" x="465.38" y="200.5" width="80" height="80" rx="17" ry="17"/>
+      <rect class="green_p" x="558.36" y="200.5" width="80" height="80" rx="17" ry="17"/>
+      <path class="green_p" d="M.5,317.5a17,17,0,0,1,17-17h46a17,17,0,0,1,17,17v46a17,17,0,0,1-17,17h-46a17,17,0,0,1-17-17Z"/>
+      <rect class="red_p" x="93.47" y="300.5" width="80" height="80" rx="17" ry="17"/>
+      <path class="red_p" d="M186.45,317.5a17,17,0,0,1,17-17h46a17,17,0,0,1,17,17v46a17,17,0,0,1-17,17h-46a17,17,0,0,1-17-17Z"/>
+      <rect class="green_p" x="372.4" y="300.5" width="80" height="80" rx="17" ry="17"/>
+      <rect class="green_p" x="465.38" y="300.5" width="80" height="80" rx="17" ry="17"/>
+      <rect class="green_p" x="558.36" y="300.5" width="80" height="80" rx="17" ry="17"/>
+      <path class="green_p" d="M.5,417.5a17,17,0,0,1,17-17h46a17,17,0,0,1,17,17v46a17,17,0,0,1-17,17h-46a17,17,0,0,1-17-17Z"/>
+      <rect class="green_p" x="93.47" y="400.5" width="80" height="80" rx="17" ry="17"/>
+      <path class="green_p" d="M186.45,417.5a17,17,0,0,1,17-17h46a17,17,0,0,1,17,17v46a17,17,0,0,1-17,17h-46a17,17,0,0,1-17-17Z"/>
+      <rect class="green_p" x="372.4" y="400.5" width="80" height="80" rx="17" ry="17"/>
+      <rect class="green_p" x="465.38" y="400.5" width="80" height="80" rx="17" ry="17"/>
+      <rect class="green_p" x="558.36" y="400.5" width="80" height="80" rx="17" ry="17"/>
+      <path class="green_p" d="M281.45,417.5a17,17,0,0,1,17-17h46a17,17,0,0,1,17,17v46a17,17,0,0,1-17,17h-46a17,17,0,0,1-17-17Z"/>
+    </g>
+</svg>
