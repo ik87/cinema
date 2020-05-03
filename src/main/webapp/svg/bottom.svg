@@ -13,7 +13,7 @@
     }
 
     .chose {
-    fill: yellow;
+    fill: #d1d11f;
     }
     text {
         font-size: 1.1em;

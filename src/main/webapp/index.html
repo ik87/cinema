@@ -8,7 +8,6 @@
     <!-- Bootstrap CSS -->
     <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" rel="stylesheet">
-
     <title>SVG test</title>
 </head>
 <style>
@@ -32,9 +31,11 @@
 
 
 <div class="container">
-    <div style="margin: 1rem 0rem 1rem 1rem">
+    <!-- choose film -->
+    <!-- places -->
+    <div style="margin: 5vh 0rem 1rem 1rem">
         <div class="row">
-            <div class="mx-auto ">
+            <div class="mx-auto text-white">
                 <h2 class="display-4">Cinema <span class="badge badge-secondary">ik87</span></h2>
             </div>
         </div>
@@ -44,7 +45,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="mx-auto mt-2">
+            <div class="mx-auto mt-2  text-white">
                 Please choose place:
             </div>
         </div>
@@ -77,6 +78,21 @@
                 </button>
             </div>
             <div class="modal-body">
+                <!--Block calculate price-->
+                <div class="alert alert-info">
+                           calculate:
+                           <span class="badge badge-info"> 4</span>
+                        x
+                        <span class="badge badge-info">50$</span>
+                               =
+                               <span class="badge badge-info">200$</span>
+                <hr>
+                           <H3>
+                           final price: <span class="badge badge-danger "> 200$</span>
+                           </H3>
+                    </div>
+                <!-- end -->
+
                 <form>
                     <div class="form-group">
                         <label for="recipient-name" class="col-form-label">Phone number:</label>
@@ -84,13 +100,126 @@
                                placeholder="Phone number">
                     </div>
                     <div class="form-group">
-                        <label for="message-text" class="col-form-label">Message:</label>
-                        <textarea class="form-control" id="message-text"></textarea>
+                        <!-- Buy -->
+                        <div class="row">
+                            <div>
+                                <div class="bg-white rounded-lg p-3">
+                                    <!-- Credit card form tabs -->
+                                    <ul role="tablist" class="nav bg-light nav-pills rounded-pill nav-fill mb-3">
+                                        <li class="nav-item">
+                                            <a data-toggle="pill" href="#nav-tab-card" class="nav-link active rounded-pill">
+                                                <i class="fa fa-credit-card"></i>
+                                                Credit Card
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a data-toggle="pill" href="#nav-tab-paypal" class="nav-link rounded-pill">
+                                                <i class="fa fa-paypal"></i>
+                                                Paypal
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a data-toggle="pill" href="#nav-tab-bank" class="nav-link rounded-pill">
+                                                <i class="fa fa-university"></i>
+                                                Bank Transfer
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <!-- End -->
+
+
+                                    <!-- Credit card form content -->
+                                    <div class="tab-content">
+
+                                        <!-- credit card info-->
+                                        <div id="nav-tab-card" class="tab-pane fade show active">
+                                            <p class="alert alert-success">Some text success or error</p>
+                                            <form role="form">
+                                                <div class="form-group">
+                                                    <label for="username">Full name (on the card)</label>
+                                                    <input id="username" type="text" name="username" placeholder="Jason Doe" required class="form-control">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="cardNumber">Card number</label>
+                                                    <div class="input-group">
+                                                        <input id="cardNumber" type="text" name="cardNumber" placeholder="Your card number" class="form-control" required>
+                                                        <div class="input-group-append">
+                    <span class="input-group-text text-muted">
+                                                <i class="fa fa-cc-visa mx-1"></i>
+                                                <i class="fa fa-cc-amex mx-1"></i>
+                                                <i class="fa fa-cc-mastercard mx-1"></i>
+                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-sm-8">
+                                                        <div class="form-group">
+                                                            <label><span class="hidden-xs">Expiration</span></label>
+                                                            <div class="input-group">
+                                                                <input type="number" placeholder="MM" name="" class="form-control" required>
+                                                                <input type="number" placeholder="YY" name="" class="form-control" required>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <div class="form-group mb-4">
+                                                            <label data-toggle="tooltip" title="Three-digits code on the back of your card">CVV
+                                                                <i class="fa fa-question-circle"></i>
+                                                            </label>
+                                                            <input type="text" required class="form-control">
+                                                        </div>
+                                                    </div>
+
+
+
+                                                </div>
+                                                <button type="button" class="subscribe btn btn-primary btn-block rounded-pill shadow-sm"> Confirm  </button>
+                                            </form>
+                                        </div>
+                                        <!-- End -->
+
+                                        <!-- Paypal info -->
+                                        <div id="nav-tab-paypal" class="tab-pane fade">
+                                            <p>Paypal is easiest way to pay online</p>
+                                            <p>
+                                                <button type="button" class="btn btn-primary rounded-pill"><i class="fa fa-paypal mr-2"></i> Log into my Paypal</button>
+                                            </p>
+                                            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                            </p>
+                                        </div>
+                                        <!-- End -->
+
+                                        <!-- bank transfer info -->
+                                        <div id="nav-tab-bank" class="tab-pane fade">
+                                            <h6>Bank account details</h6>
+                                            <dl>
+                                                <dt>Bank</dt>
+                                                <dd> THE WORLD BANK</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>Account number</dt>
+                                                <dd>7775877975</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>IBAN</dt>
+                                                <dd>CZ7775877975656</dd>
+                                            </dl>
+                                            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                            </p>
+                                        </div>
+                                        <!-- End -->
+                                    </div>
+                                    <!-- End -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End -->
                     </div>
                 </form>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
                 <button type="button" class="btn btn-primary">OK</button>
             </div>
 
@@ -98,9 +227,14 @@
     </div>
 </div>
 
-<script>
-
-</script>
+<!--footer-->
+<footer class="page-footer font-small purple pt-4 ">
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-2 text-white">© ik87 | 2020 |
+        <a href="https://github.com/ik87/cinema">source</a>
+    </div>
+    <!-- Copyright -->
+</footer>
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
@@ -113,6 +247,16 @@
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
 
+<!--Payment-->
+<!--get from https://bootstrapious.com/p/bootstrap-credit-card-form-->
+<link href="css/payment.css" rel="stylesheet">
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="js/payment.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+
+<!--My style-->
+<link href="css/style.css" rel="stylesheet">
+
 <!-- Places generator -->
 <link href="css/place.css" rel="stylesheet">
 <script src="js/place_gen.js"></script>
@@ -121,7 +265,7 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/src/jquery.maskedinput.js"
         type="text/javascript"></script>
 <script>
-    $(".phone_mask").mask("+9 (999) 999-99-99");
+    $(".phone_mask").mask("+7 (999) 999-99-99");
 </script>
 </body>
 </html>
